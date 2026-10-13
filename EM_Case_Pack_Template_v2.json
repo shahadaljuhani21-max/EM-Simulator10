@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "2.0",
+  "packTitle": "Example Case Pack",
+  "sourceStatus": "requires-clinician-review",
+  "cases": [
+    {
+      "id": "unique-case",
+      "title": "Undifferentiated presentation",
+      "specialty": "Emergency Medicine",
+      "presentation": "Fictional presentation",
+      "objectives": [
+        "Recognize immediate threats"
+      ],
+      "references": [
+        {
+          "title": "Verified source",
+          "url": "https://example.org",
+          "note": "Verify exact section"
+        }
+      ],
+      "steps": [
+        {
+          "id": "step-1",
+          "prompt": "What next?",
+          "vitals": "BP 120/80 \u00b7 HR 80 \u00b7 RR 18 \u00b7 SpO\u2082 98%",
+          "critical": [
+            "action"
+          ],
+          "rules": [
+            {
+              "label": "Correct action",
+              "category": "optimal",
+              "patterns": [
+                "action",
+                "synonym"
+              ],
+              "feedback": "Why this is correct",
+              "flags": []
+            }
+          ],
+          "updates": {
+            "action": "Patient response"
+          }
+        }
+      ]
+    }
+  ]
+}

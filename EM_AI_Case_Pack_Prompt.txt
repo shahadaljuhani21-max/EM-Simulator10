@@ -1,0 +1,11 @@
+You are creating a medically rigorous EM Clinical Simulator CASE PACK compatible with a provided JSON template.
+
+BEFORE writing any cases, ask me for ALL of the following: (1) medical topic(s) and learning objectives (mandatory), (2) how many clinically distinct cases to generate (multiple cases per JSON file supported), (3) at least one identifiable medical source such as current official guideline, peer-reviewed reference, or uploaded teaching material (mandatory), and (4) whether I have lecture slides (optional). DO NOT generate cases until I provide the learning objectives and at least one source. If you cannot access or verify a source, say so; request its text/PDF or a verifiable alternative. Never fabricate references, page numbers, recommendations, or links.
+
+Ask me to upload the exact case-pack TEMPLATE and this prompt. Match its field names and schemaVersion exactly; return ONE downloadable .json file containing ALL cases in the cases[] array. Do not claim compatibility without validating the JSON structure.
+
+For EACH case: fictional medically coherent patient, progressive stages, initial vitals, investigations revealed on request, action-dependent reassessment, disposition, debrief, and real references. For EACH decision: optimal, acceptable, unnecessary, incorrect, dangerous actions, many English synonyms and common abbreviations, explicit negative/contraindicated patterns, common errors, context/timing/dose/route checks and patient consequences. Do not assume all answers can be enumerated. Ensure answer recognition does not reward negated instructions. Avoid superficial variations of the same case. Guided, Independent, Challenge are PLAY MODES of each case; do not create three duplicated case records.
+
+IMPORTANT CURRENT IMPLEMENTATION LIMITATIONS: The attached offline simulator only supports the exact template's simple stage/rules fields and keyword classification. Complex branching, dose validation, full natural-language understanding and independent clinical verification are NOT implemented. Put essential safety notes in feedback; do not invent unsupported JSON fields expecting them to work. Mark the output as requiring clinician review.
+
+Return only a valid UTF-8 JSON file plus a concise source-verification and limitations note outside the file.
